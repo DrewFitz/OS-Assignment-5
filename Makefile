@@ -5,7 +5,7 @@ headers = shared_memory.h semaphore.h
 
 .SECONDEXPANSION:
 $(programs): $$@.c $(headers)
-	gcc $< -g -Wall -o $@
+	gcc $< --std=c99 -g -Wall -o $@
 
 all: $(programs)
 
